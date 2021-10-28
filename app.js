@@ -1,17 +1,13 @@
 const key = '7c46GY88xbtmTJCJ19eWTAzYkVA7dYb2';
-const form = document.querySelector("#searchForm");
-const input = document.querySelector("#search");
 
-async function getGif(query){
+$("form").on("submit", async function(e){
+    e.preventDefault();
+    // console.log("Clicked");
+    const query = $("input").val();
+    // console.log(query);
     const url = `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${key}`;
     const res = await axios.get(url);
     console.log(res);
-};
-
-form.addEventListener("submit", function(e){
-    e.preventDefault();
-    getGif(input.value);
-    input.value = '';
 });
 
 
