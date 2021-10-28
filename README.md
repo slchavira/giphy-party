@@ -10,4 +10,4 @@ Your application should do the following:
 -   Allow the user to remove all of the GIFs by clicking a button
 -   Here is an example of what the application might look like:
 
-![Giphy Demo](/giphyDemo.gif)# giphy-party
+![Giphy Demo](giphyDemo.gif)
