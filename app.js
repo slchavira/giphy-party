@@ -1,14 +1,15 @@
-const key = '7c46GY88xbtmTJCJ19eWTAzYkVA7dYb2';
-
 $("form").on("submit", async function(e){
     e.preventDefault();
-    // console.log("Clicked");
     const query = $("input").val();
-    // console.log(query);
-    const url = `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${key}`;
-    const res = await axios.get(url);
+    const res = await axios.get('http://api.giphy.com/v1/gifs/search', {params: 
+    {
+        q: query,
+        api_key: '7c46GY88xbtmTJCJ19eWTAzYkVA7dYb2'
+    }} );
     console.log(res);
 });
+
+
 
 
 // async function getRandomDog(){
